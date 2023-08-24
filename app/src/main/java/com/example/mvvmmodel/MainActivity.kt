@@ -21,5 +21,7 @@ class MainActivity : AppCompatActivity() {
             var adapter=ItemAdapter(result)
             r1.adapter=adapter
         }
+
+
     }
 }
