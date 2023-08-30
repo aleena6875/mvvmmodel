@@ -13,7 +13,7 @@
     <TextView
         android:id="@+id/showName"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="62dp"
         android:text="Name"
         android:padding="18dp"
         android:textSize="20dp">
