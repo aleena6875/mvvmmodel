@@ -17,10 +17,10 @@ class MainActivity2 : AppCompatActivity() {
         val gender:TextView=findViewById(R.id.gender)
         val status:TextView=findViewById(R.id.status)
         val clickedItem=intent?.getParcelableExtra<Result>("clickedItem")
-name.text=clickedItem?.name
-        species.text=clickedItem?.species
-        gender.text=clickedItem?.gender
-        status.text=clickedItem?.status
+name.text="Name:${clickedItem?.name}"
+        species.text="Species:${clickedItem?.species}"
+        gender.text="Gender:${clickedItem?.gender}"
+        status.text="Status:${clickedItem?.status}"
         if (clickedItem != null) {
             image.setImage(clickedItem.image)
         }

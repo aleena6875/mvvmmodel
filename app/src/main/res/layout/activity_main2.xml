@@ -3,27 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/activity1bg"
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
+
+<LinearLayout
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/characterImage"
         android:layout_width="150dp"
         android:layout_height="120dp"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="116dp">
+        tools:ignore="MissingConstraints">
 
     </de.hdodenhof.circleimageview.CircleImageView>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/showName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:padding="16sp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="More Fonts..."
+        android:padding="8dp"
         android:text="name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +48,8 @@
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:padding="16sp"
+        android:layout_marginTop="24dp"
+        android:padding="8dp"
         android:text="status"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -45,8 +60,8 @@
         android:id="@+id/species"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:padding="16sp"
+        android:layout_marginTop="24dp"
+        android:padding="8dp"
         android:text="species"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
@@ -57,13 +72,16 @@
         android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:padding="16sp"
+        android:layout_marginTop="24dp"
+        android:padding="8dp"
         android:text="gender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/species" />
 
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

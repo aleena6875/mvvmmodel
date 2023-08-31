@@ -1,15 +1,22 @@
 package com.example.mvvmmodel
 
 import android.content.Intent
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat.startActivityForResult
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mvvmmodel.Result
+
 
 class ItemAdapter(var list:List<Result>):RecyclerView.Adapter<ItemAdapter.ViewHolder>(){
+   
   inner class ViewHolder(view: View):RecyclerView.ViewHolder(view){
       var image:ImageView=view.findViewById(R.id.characterImage)
       var name:TextView=view.findViewById(R.id.showName)
@@ -50,5 +57,12 @@ class ItemAdapter(var list:List<Result>):RecyclerView.Adapter<ItemAdapter.ViewHo
             i.putExtra("clickedItem",listData)
             holder.r2.context.startActivity(i)
         }
+        holder.image.setOnClickListener {
+            val dialogFragment=IconDialogueBox(listData.image)
+            dialogFragment.show((holder.itemView.context as AppCompatActivity).supportFragmentManager,"dialogtag")
+        }
+
     }
-    }
+        }
+
+
