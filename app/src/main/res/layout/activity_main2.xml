@@ -3,31 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/activity1bg"
+    android:background="@drawable/bg1"
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 <LinearLayout
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
     android:layout_width="match_parent"
-    android:layout_gravity="center_horizontal"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
     android:orientation="vertical">
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/characterImage"
         android:layout_width="150dp"
         android:layout_height="120dp"
         android:padding="16dp"
-        android:layout_gravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
+        android:layout_gravity="center_horizontal"/>
 
-    </de.hdodenhof.circleimageview.CircleImageView>
 <androidx.appcompat.widget.LinearLayoutCompat
     android:layout_width="wrap_content"
+    android:id="@+id/l2"
     android:layout_gravity="center"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -37,24 +40,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:fontFamily="More Fonts..."
         android:padding="8dp"
         android:text="name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/characterImage" />
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/aclonica" />
 
     <TextView
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/aclonica"
         android:padding="8dp"
         android:text="status"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/showName" />
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/species"
@@ -63,10 +64,9 @@
         android:layout_marginTop="24dp"
         android:padding="8dp"
         android:text="species"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/status" />
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:fontFamily="@font/aclonica" />
 
     <TextView
         android:id="@+id/gender"
@@ -74,14 +74,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:padding="8dp"
+        android:textColor="@color/white"
         android:text="gender"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/species" />
-
+        android:textSize="18sp"
+        android:fontFamily="@font/aclonica" />
 </androidx.appcompat.widget.LinearLayoutCompat>
-
 </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
